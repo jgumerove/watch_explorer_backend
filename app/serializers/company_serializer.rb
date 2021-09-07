@@ -1,4 +1,3 @@
-class CompanySerializer
-  include FastJsonapi::ObjectSerializer
-  attributes 
+class CompanySerializer < ActiveModel::Serializer
+  attributes :id
 end
