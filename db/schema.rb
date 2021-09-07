@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_07_182502) do
+ActiveRecord::Schema.define(version: 2021_09_07_190855) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -18,4 +18,19 @@ ActiveRecord::Schema.define(version: 2021_09_07_182502) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "watches", force: :cascade do |t|
+    t.string "image_url"
+    t.string "collection"
+    t.integer "year"
+    t.string "watch_type"
+    t.string "band_material"
+    t.integer "price"
+    t.integer "company_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "movement"
+    t.index ["company_id"], name: "index_watches_on_company_id"
+  end
+
+  add_foreign_key "watches", "companies"
 end
