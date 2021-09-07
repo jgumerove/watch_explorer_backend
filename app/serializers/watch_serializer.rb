@@ -1,3 +1,3 @@
 class WatchSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :image_url, :collection, :year, :watch_type, :band_material, :price, :movement, :company_id
 end
