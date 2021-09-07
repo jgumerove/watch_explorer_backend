@@ -2,7 +2,7 @@ class WatchesController < ApplicationController
 
     def index
         watches = Watch.all 
-        render json: watches
+        render json: WatchSerializer.new(watches)
     end
 
     def create
