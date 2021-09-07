@@ -3,7 +3,7 @@ Rails.application.routes.draw do
      
     namespace :api do
       namespace :v1 do
-        resources :watches, only [:index] #can add later -- only focusing on the index route now 
+        resources :watches, only: [:index] #can add later -- only focusing on the index route now 
       end
     end
 
