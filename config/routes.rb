@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-     
-    namespace :api do
-      namespace :v1 do
-        resources :watches, only: [:index] #can add later -- only focusing on the index route now 
-      end
-    end
-
+     resources :watches
+    
 
 end
