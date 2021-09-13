@@ -1,4 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :username
-  has_many :watches
+  attributes :id, :username
+  #has_many :watches
 end
